@@ -33,15 +33,14 @@ function minesweeper(matrix) {
   }
   for (let i = 0; i < matrixArr.length; i += 1) {
     for (let k = 0; k < matrixArr[i].length; k += 1) {
-      if (matrixArr[i][k] === matrixArr[i][0] &&  matrixArr[i][k] === true) {
+      if (matrixArr[i][k] === matrixArr[i][0] && matrixArr[i][k] === true) {
         matrixArr[i][k + 1] = colMines;
         matrixArr[i][k] = colMines - 1;
-      } 
-      else if (matrixArr[i][k] !== matrixArr[i][0] &&  matrixArr[i][k] === true) {
+      } else if (matrixArr[i][k] !== matrixArr[i][0] &&
+        matrixArr[i][k] === true) {
         matrixArr[i][k - 1] = colMines;
         matrixArr[i][k] = colMines - 1;
-      }
-      else if (matrixArr[i][k] === false) {
+      } else if (matrixArr[i][k] === false) {
         if (colMines === 0) matrixArr[i][k] = 0;
         else matrixArr[i][k] = colMines - 1;
       }

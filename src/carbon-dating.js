@@ -24,8 +24,7 @@ function dateSample(sampleActivity) {
     const numActiv = Number(sampleActivity);
     if (isNaN(numActiv) || numActiv < 1 || numActiv > 15) {
       res = false;
-    }
-    else {
+    } else {
       const a = (Math.log(MODERN_ACTIVITY) - Math.log(numActiv)) / Math.log(2);
       res = Math.ceil(a * HALF_LIFE_PERIOD);
     }

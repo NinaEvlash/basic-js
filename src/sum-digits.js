@@ -13,17 +13,17 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function getSumOfDigits(n) {
-  function getSum (n) {
+  function getSum(n) {
     let numberSum = 0;
     while (n) {
       numberSum += n % 10;
-      n = Math.floor(n / 10); 
+      n = Math.floor(n / 10);
     }
-    return numberSum; 
-  };
+    return numberSum;
+  }
   while (n >= 10) {
-    n = getSum(n); 
-  };
+    n = getSum(n);
+  }
   return n;
 }
 

@@ -18,12 +18,11 @@ function encodeLine(str) {
     for (let i = 0; i < arr.length; i += 1) {
       if (arr[i] === arr[i + 1]) {
         ferstArr.push(arr[i]);
-      }
-      else {
+      } else {
         ferstArr.push(arr[i]);
         break;
+      }
     }
-    } 
     const index = ferstArr.length;
     if (index === 1) resArr.push(arr[0]);
     else resArr.push(String(index), arr[0])

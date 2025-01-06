@@ -13,14 +13,13 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function deleteDigit(n) {
   const str = String(n);
-  let arr = str.split('');
+  const arr = str.split('');
   let index = 0;
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] < arr[i + 1]) {
       index = arr.indexOf(arr[i]);
       break;
-    }
-    else if (arr[i] > arr[i + 1]) {
+    } else if (arr[i] > arr[i + 1]) {
       index = arr.indexOf(arr[i + 1]);
       break;
     }

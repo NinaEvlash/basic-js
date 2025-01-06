@@ -17,13 +17,38 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function repeater(str, options) {
   const string = String(str);
-  const repeatTimes = (options.repeatTimes === undefined) ? 1 : options.repeatTimes;
-  const separator = (options.separator === undefined) ? '+' : options.separator;
-  const additionStr = (options.addition === undefined) ? '' : String(options.addition);
-  const additionRepeatTimes = (options.additionRepeatTimes === undefined) ? 1 : options.additionRepeatTimes;
-  const additionSeparator = (options.additionSeparator === undefined) ? '|' : options.additionSeparator;
-  let arrAddition = [];
-  let arrAssociat = [];
+  let repeatTimes;
+  if (options.repeatTimes === undefined) {
+    repeatTimes = 1;
+  } else {
+    repeatTimes = options.repeatTimes;
+  }
+  let separator;
+  if (options.separator === undefined) {
+    separator = '+';
+  } else {
+    separator = options.separator;
+  }
+  let additionStr;
+  if (options.addition === undefined) {
+    additionStr = '';
+  } else {
+    additionStr = String(options.addition);
+  }
+  let additionRepeatTimes;
+  if (options.additionRepeatTimes === undefined) {
+    additionRepeatTimes = 1;
+  } else {
+    additionRepeatTimes = options.additionRepeatTimes;
+  }
+  let additionSeparator;
+  if (options.additionSeparator === undefined) {
+    additionSeparator = '|';
+  } else {
+    additionSeparator = options.additionSeparator;
+  }
+  const arrAddition = [];
+  const arrAssociat = [];
   for (let i = 0; i < additionRepeatTimes; i += 1) {
     arrAddition.push(additionStr);
   }

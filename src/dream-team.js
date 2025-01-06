@@ -17,8 +17,8 @@ function createDreamTeam(members) {
   let res;
   if (!Array.isArray(members)) res = false;
   else {
-    let nameArr = [];
-    let nameStrArr = [];
+    const nameArr = [];
+    const nameStrArr = [];
     for (let i = 0; i < members.length; i += 1) {
       if (typeof members[i] === 'string') nameArr.push(members[i].trimStart());
     }

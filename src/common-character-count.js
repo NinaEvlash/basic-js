@@ -19,7 +19,7 @@ function getCommonCharacterCount(s1, s2) {
     const index = arr2.indexOf(arr1[i]);
     if (index !== -1) {
       arr2.splice(index, 1);
-      count += 1
+      count += 1;
     }
   }
   return count;

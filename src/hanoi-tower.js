@@ -24,7 +24,8 @@ function calculateHanoi(disksNumber, turnsSpeed) {
     }
   }
   towerOfHanoi(disksNumber, 'start', 'target', 'end');
-  const seconds = Math.floor(count * 3600 / turnsSpeed);
+  const a = count * 3600;
+  const seconds = Math.floor(a / turnsSpeed);
   const obj = {};
   obj.turns = count;
   obj.seconds = seconds;
